@@ -12,11 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEFAULT_VERSION = "1.6.0"
+DEFAULT_VERSION = "1.11.0"
 
 MIN_SUPPORTED_VERSION = "1.3.0"
 
 SQLC_VERSIONS = {
+    "1.11.0": {
+        "darwin_amd64": ("sqlc_1.11.0_darwin_amd64.tar.gz", "f5d5a800bf29dd3175cbec47ad7f424bf5fb887fc9922bd141749982f78bd6ac"),
+    },
     "1.6.0": {
         "darwin_amd64": ("sqlc-v1.6.0-darwin-amd64.tar.gz", "386b6fea4e402c316c4218176abdd3d4e833f209999ef9154d78b3e3b2ec563c"),
         "linux_amd64": ("sqlc-v1.6.0-linux-amd64.tar.gz", "a246200942c926dc76c8803d7fd5a2a5f4e9fbcde44a95408be6ce7d377523c5"),

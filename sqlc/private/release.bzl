@@ -47,7 +47,7 @@ def _detect_host_platform(ctx):
         uname = arch_result.stdout.strip()
         if uname in ("aarch64", "arm64"):
             goarch = "arm64"
-        if uname in ("armv6l", "armv7l"):
+        elif uname in ("armv6l", "armv7l"):
             goarch = "arm"
         elif uname in ("amd64", "x86_64"):
             goarch = "amd64"
@@ -61,6 +61,9 @@ def _detect_host_platform(ctx):
         fail("windows is not currently supported, patches are welcome")
     else:
         fail("unknown os type {}, so unable to detect architecture".format(goos))
+
+    if goos == "darwin" and goarch == "arm64":
+        return "darwin", "amd64"
 
     return goos, goarch
 
