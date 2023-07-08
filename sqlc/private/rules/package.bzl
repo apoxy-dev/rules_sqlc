@@ -93,7 +93,7 @@ sqlc_package = rule(
         "engine": attr.string(
             default = "postgresql",
             doc = "Either postgresql or mysql. MySQL support is experimental",
-            values = ["postgresql", "mysql", "mysql:beta", "_lemon", "_dolphin", "_elephant"],
+            values = ["postgresql", "mysql", "sqlite", "mysql:beta", "_lemon", "_dolphin", "_elephant"],
         ),
         "overrides": attr.string_dict(
             doc = "A dictionary of type overrides mapping from type to package (e.g. \"uuid\":\"github.com/gofrs/uuid.UUID\" or \"uuid:nullable\":\"github.com/gofrs/uuid.UUID\" if nullable)",
